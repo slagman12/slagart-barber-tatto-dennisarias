@@ -1,0 +1,662 @@
+
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #100d14;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* =================================
+   PORTADA PRINCIPAL
+================================= */
+
+body.pagina-portada {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+                        rgba(0, 0, 0, 0.65)),
+        url("../Imagenes/potada.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.portada {
+    padding: 30px;
+}
+
+.portada img {
+    width: 100px;
+    height: 100px;
+    max-width: 80%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.portada h1 {
+    color: #b44cff;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.portada h2 {
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.portada p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #ddd;
+}
+
+.portada .boton {
+    display: inline-block;
+    background: #8a2be2;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.portada .boton:hover {
+    background: #bd65ff;
+    transform: scale(1.05);
+}
+
+/* =================================
+   ENCABEZADO DEL INICIO
+================================= */
+
+header {
+    background: linear-gradient(135deg, #100d14, #4b2470, #100d14);
+    text-align: center;
+    padding: 55px 20px;
+    border-bottom: 3px solid #a66be8;
+}
+
+header h1 {
+    font-size: 55px;
+    letter-spacing: 8px;
+    color: white;
+}
+
+header p {
+    color: #d2a9ff;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+header span {
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+/* =================================
+   MENÚ DE NAVEGACIÓN
+================================= */
+
+nav {
+    background-color: #1c1723;
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #7543a8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c69af4;
+}
+
+/* =================================
+   SECCIONES
+================================= */
+
+section {
+    background-color: #1b1720;
+    margin: 35px auto;
+    padding: 35px;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 15px;
+    border: 1px solid #443052;
+    scroll-margin-top: 90px;
+}
+
+h2 {
+    color: #c69af4;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+h3 {
+    color: #d2a9ff;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* =================================
+   PRESENTACIÓN
+================================= */
+
+.presentacion {
+    text-align: center;
+    padding: 45px 30px;
+}
+
+.presentacion img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #a66be8;
+    margin-bottom: 20px;
+}
+
+/* =================================
+   TARJETAS
+================================= */
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: #28212f;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    border: 1px solid #7543a8;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tarjeta ul {
+    text-align: left;
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+/* =================================
+   BOTONES
+================================= */
+
+.boton,
+button {
+    display: inline-block;
+    background-color: #7543a8;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.boton:hover,
+button:hover {
+    background-color: #a66be8;
+    color: #100d14;
+}
+
+/* =================================
+   FORMULARIOS
+================================= */
+
+form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    color: #d2a9ff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #7543a8;
+    border-radius: 7px;
+    background-color: #100d14;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #a66be8;
+}
+
+form button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#contacto {
+    text-align: center;
+}
+
+/* =================================
+   IMÁGENES
+================================= */
+
+.foto-diseño {
+    max-width: 100%;
+    width: 320px;
+    border-radius: 12px;
+    display: block;
+}
+
+.foto-producto {
+    max-width: 100%;
+    width: 160px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.video-contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.video-contenedor video {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 15px;
+}
+footer {
+    background-color: #09070c;
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 3px solid #7543a8;
+}
+
+footer p {
+    color: #bdb4c7;
+    font-size: 14px;
+}
+
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    section {
+        width: 94%;
+        padding: 22px;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .portada h1 {
+        font-size: 38px;
+    }
+
+    .portada img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .foto-diseño,
+    .foto-producto {
+        max-width: 100%;
+    }
+}
+.diseno-tatuaje {
+    text-align: center;
+    margin: 20px;
+}
+
+.diseno-tatuaje img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn-me-gusta {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-me-gusta:hover {
+    background-color: #ff1744;
+}
+
+/* DISEÑO GENERAL DE LA TIENDA */
+
+.tienda-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 25px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+/* PRODUCTOS */
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.productos-grid li {
+    background: #202020;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.foto-producto {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.productos-grid button {
+    background: #c00000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* CARRITO LATERAL */
+
+.carrito-panel {
+    background: #202020;
+    color: white;
+    padding: 22px;
+    border-radius: 15px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.carrito-panel h2 {
+    text-align: center;
+    color: white;
+}
+
+.carrito-panel ul {
+    padding-left: 20px;
+}
+
+.carrito-panel li {
+    margin-bottom: 12px;
+}
+
+.total-compra {
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-compra h2 {
+    color: #ff3333;
+}
+
+/* BOTONES */
+
+.carrito-panel button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnVaciar {
+    background: #555;
+    color: white;
+}
+
+#btnComprar {
+    background: #c00000;
+    color: white;
+}
+
+.carrito-panel button:hover,
+.productos-grid button:hover {
+    opacity: 0.8;
+}
+
+/* BUSCADOR */
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.buscador input,
+.buscador select {
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #aaa;
+}
+
+/* CELULARES */
+
+@media (max-width: 800px) {
+
+    .tienda-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carrito-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =================================
+   TIENDA SLAG - DISEÑO DEFINITIVO
+================================= */
+
+.tienda-contenedor {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 25px;
+    align-items: start;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* PRODUCTOS */
+
+#listaProductos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#listaProductos li {
+    width: 100%;
+    background: #28212f;
+    border: 1px solid #7543a8;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* FOTOS */
+
+#listaProductos .foto-producto {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+/* CARRITO */
+
+.carrito-panel {
+    background: #28212f;
+    border: 1px solid #7543a8;
+    border-radius: 15px;
+    padding: 20px;
+    position: sticky;
+    top: 90px;
+}
+
+.carrito-panel h2 {
+    color: #c69af4;
+}
+
+#listaCarrito {
+    list-style: none;
+    padding: 0;
+}
+
+#listaCarrito li {
+    margin: 12px 0;
+    padding: 10px;
+    background: #100d14;
+    border-radius: 8px;
+}
+
+#totalCarrito {
+    color: #c69af4;
+    font-size: 25px;
+}
+
+#btnComprar {
+    width: 100%;
+    background: #7543a8;
+}
+
+#btnVaciar {
+    width: 100%;
+    background: #444;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .tienda-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    #listaProductos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .carrito-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    #listaProductos {
+        grid-template-columns: 1fr;
+    }
+}
