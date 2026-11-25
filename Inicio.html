@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLAG BARBER & TATTOO STUDY</title>
+</head>
+      
+<body>
+
+    <header id="inicio">
+         <h1>BIENVENIDO</h1>
+        <h1>SLAG ART</h1>
+        <p>BARBER & TATTOO</p>
+        <span>Tu estilo, tu identidad.</span>
+          <nav> 
+        <a href="#inicio">Inicio</a>
+        <a href="pagina5.html">Iniciar sesión</a>
+        <a href="#servicios">Servicios</a>
+         <a href="pagina4.html">Productos</a>
+        <a href="pagina2.html">Barbería</a>
+        <a href="pagina3.html">Tatuajes</a>
+        <a href="#equipo">Artistas</a>
+        <a href="#citas">Agendar cita</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <label>Escribe tu nombre:</label>
+
+    <input type="text" id="nombrebienvenida" placeholder="Tu nombre">
+
+    <button onclick="mostrarNombre()">Enviar</button>
+
+    <h2 id="resultado"></h2>
+    <script>
+        function mostrarNombre() {
+
+            let nombre = document.getElementById("nombrebienvenida").value;
+
+            if (nombre === "") {
+                alert("Por favor, escribe tu nombre");
+            } else {
+                document.getElementById("resultado").innerHTML =
+                    "¡Hola " + nombre + "! Bienvenido a Slag Art.";
+            }
+
+        }
+      
+    </script>
+    
+<section>
+    <h2>Verificar edad</h2>
+    <input type="number" id="edadUsuario" placeholder="Ingresa tu edad">
+    <button id="btnVerificar" type="button">Verificar edad</button>
+    <p id="resultadoEdad"></p>
+</section>
+
+        <section class="presentacion">
+              <img src="Imagenes/logoslag.png" alt="Logo SLAG ART">
+        
+            <p>
+                Somos un espacio dedicado al arte, la barbería
+                y los tatuajes. Creamos estilos únicos para personas
+                con personalidad.
+            </p>
+            <a class="boton" href="#servicios">Conoce nuestros servicios</a>
+        </section>
+
+        <section id="servicios">
+            <h2>NUESTROS SERVICIOS</h2> 
+             
+        <br>
+
+            <div class="contenedor">
+
+                <article class="tarjeta" id="barberia">
+                 <img src="Imagenes/barber.png"alt="Servicio de barbería">
+                    <h3>BARBERÍA</h3>
+                    <p>Cortes modernos y estilos personalizados.</p>
+                    <ul>
+                        <li>Corte clásico</li>
+                        <li>Fade</li>
+                        <li>Diseños y líneas</li>
+                        <li>Arreglo de barba</li>
+                    </ul>
+                    <a href="#citas" class="boton">Reservar corte</a>
+                </article>
+
+                <article class="tarjeta" id="tatuajes">
+                    <img src="Imagenes/tatto.png"alt="Diseños de tatuajes">
+                    <h3>TATUAJES</h3>
+                    <p>Arte sobre la piel con diseños únicos.</p>
+                    <ul>
+                        <li>Realismo</li>
+                        <li>Línea fina</li>
+                        <li>Blackwork</li>
+                        <li>Lettering</li>
+                    </ul>
+                    <a href="#citas" class="boton">Reservar tatuaje</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="equipo">
+            <h2>NUESTROS ARTISTAS</h2>
+
+            <div class="contenedor">
+                <article class="tarjeta">
+                    <h3>BARBERO 1</h3>
+                    <p>Especialista en cortes modernos.</p>
+                    <p>Horario: 09:00 AM - 05:00 PM</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>BARBERO 2</h3>
+                    <p>Especialista en fades y diseños.</p>
+                    <p>Horario: 12:00 PM - 08:00 PM</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>TATUADOR 1</h3>
+                    <p>Especialista en diseños personalizados.</p>
+                    <p>Horario: 10:00 AM - 06:00 PM</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="citas">
+            <h2>AGENDA TU CITA</h2>
+            <p>Completa el formulario para solicitar tu cita.</p>
+
+    
+               <form id="formularioCita">
+             <label for="nombre">Nombre completo:</label>
+             <input type="text" id="nombre" required>
+             <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" required>
+
+             <label for="servicio">Servicio:</label>
+             <select id="servicio" required>
+             <option value="">Selecciona un servicio</option>
+             <option value="Barbería">Barbería</option>
+             <option value="Tatuaje">Tatuaje</option>
+             </select>
+             <label for="fecha">Fecha:</label>
+             <input type="date" id="fecha" required>
+             <label for="hora">Hora:</label>
+             <input type="time" id="hora" required>
+             <label for="mensaje">Detalles:</label>
+             <textarea id="mensaje"></textarea>
+             <button type="submit">Solicitar cita</button>
+            </form>
+
+
+                
+        </section>
+        <section id="contacto">
+            <h2>CONTÁCTANOS</h2>
+            <p>SLAG BARBER & TATTOO STUDY</p>
+            <p>Atención personalizada para cada cliente.</p>
+            <p>Instagram: @crazi_slag</p>
+            <p>Teléfono: 096 239 8421</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>SLAG BARBER & TATTOO STUDY</h3>
+        <p>Proyecto académico - Fundamentos de Programación I</p>
+        <p>© 2026 SLAG DVG. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

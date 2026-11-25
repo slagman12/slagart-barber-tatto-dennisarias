@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>SLAG ART SHOP  </title>
+</head>
+<body>
+      <h1>BIENVENIDO a SLAG ART</h1>
+<section>
+
+<section id="Productos">
+
+    <h2>SLAG ART SHOP</h2>
+
+    <div class="tienda-contenedor">
+
+        <!-- PRODUCTOS -->
+        <div class="zona-productos">
+
+            <div class="buscador">
+                <input type="text" id="campoBuscar"
+                    placeholder="Buscar producto...">
+
+                <select id="selCategoria">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Vapes">Vapeo</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Calzado">Calzado</option>
+                </select>
+
+                <button id="btnFiltrar">Buscar</button>
+            </div>
+
+            <ul id="listaProductos" class="productos-grid"></ul>
+
+        </div>
+
+        <!-- CARRITO -->
+        <aside class="carrito-panel">
+
+            <h2>🛒 Mi carrito</h2>
+
+            <p id="textoCarrito">El carrito está vacío.</p>
+
+            <ul id="listaCarrito"></ul>
+
+            <div class="total-compra">
+                <h3>Total:</h3>
+                <h2>$<span id="totalCarrito">0.00</span></h2>
+            </div>
+
+            <button id="btnVaciar">Vaciar carrito</button>
+
+           <button id="btnComprar" onclick="finalizarCompra()">
+    FINALIZAR COMPRA
+</button>
+
+<p id="Muchas gracias por confiar en Slag, te esperamos vuelve pronto"></p>
+
+        </aside>
+
+    </div>
+</section>
+<a href="inicio.html">Volver a SLAG</a>
+<script src="js/script.js"></script>
+</body>
+</html>
